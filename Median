@@ -1,0 +1,10 @@
+print(vec)
+
+n = length(vec)
+if (n %% 2 == 1) {
+  median_value = vec[(n + 1) %/% 2]
+} else {
+  median_value = mean(vec[c(n %/% 2, n %/% 2 + 1)])
+}
+
+print(median_value)
