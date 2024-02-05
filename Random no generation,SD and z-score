@@ -1,0 +1,48 @@
+#Random  numbers
+random = vector("numeric", length=100)
+random[1] = 123
+a = 168
+c = 147
+m = 120
+for(i in 2:100){
+  random[i] = (a*random[i-1]+c)%%m
+}
+print(random)
+#Mean
+mean = 0
+sum=0
+for(i in 1:100){
+  sum = sum+random[i]
+}
+mean = sum / 100
+print(mean)
+#Standard deviation
+sd = 0
+sum = 0
+for(i in 1:100){
+  sum = sum + (random[i]-mean)*(random[i]-mean)
+}
+sd = sqrt(sum/100)
+x = 134
+#Z-Score
+z = (x - mean)/sd
+print(z)
+
+#Co-variance and Co-relation
+vector_x <- c(5, 8, 9, 10, 11)
+vector_y <- c(5, 6, 7, 8, 9)
+
+# Mean of vectors
+mean_x <- mean(vector_x)
+mean_y <- mean(vector_y)
+
+# Calculate correlation
+correlation <- sum((vector_x - mean_x) * (vector_y - mean_y)) /
+  sqrt(sum((vector_x - mean_x)^2) * sum((vector_y - mean_y)^2))
+
+# Calculate covariance
+covariance <- sum((vector_x - mean_x) * (vector_y - mean_y)) / (length(vector_x) - 1)
+
+# Display results
+cat("Correlation:", correlation, "\n")
+cat("Covariance:", covariance,"\n")
