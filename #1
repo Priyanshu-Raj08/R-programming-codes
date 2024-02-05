@@ -1,0 +1,58 @@
+for (x in 1:10)
+{
+  cat("My name is \"priyanhu\"\n")
+}
+
+a=60
+b=100
+c=20
+if(a>b)
+{
+  if(a>c)
+  {
+    print(a)
+  }
+  }else if(b>a){
+    if(b>c){
+    print(b)
+    }
+  }else{
+    print(c)
+  }
+
+a=10
+b=20
+c=30
+if(a>b && a>c)
+{
+  print(a)
+}else if(b>a && b>c){
+  print(b)
+}else{
+  print(c)
+}
+
+x=5
+while(x>=0)
+{
+  if(x==2){
+    break
+  }
+  
+  print(x)
+  x=x-1
+}
+vec= c(1,2,3,5,7)
+List1= list(1,2,3)
+scan(what=numeric())
+
+vec=c(1, 2, 3, 5, 7)
+for (i in 1:(length(vec)-1)) {
+  for (j in (i+1):length(vec)) {
+    if (vec[i] > vec[j]) {
+      temp = vec[i]
+      vec[i] = vec[j]
+      vec[j] = temp
+    }
+  }
+}
